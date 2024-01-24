@@ -1,0 +1,218 @@
+<html>
+<head>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<title> daily expense tracker </title>
+<style>
+
+    .top-links {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        text-decoration: none;
+        padding: 5px 10px;
+
+
+    }
+
+    .top-links a {
+        margin-left: 10px;
+        text-decoration: none;
+        font-size: large;
+        color:rgb(17, 78, 111);
+        border: 1px solid #0000007e; 
+        padding: 5px 10px; 
+        border-radius: 5px;
+
+    }
+
+    a:hover {  color: rgb(89, 197, 232); } 
+
+	.input-container{
+		position: relative;
+        margin-bottom: 20px;
+	}
+	.input-container input {
+		 min-width: 100;
+         padding: 10px;
+         border: none;
+         border-bottom: 1px solid #ccc;
+         outline: none;
+         font-size: 16px;
+	}
+	.input-container input:focus + .watermark {
+            opacity: 0;
+            }
+    .input-container input:not(:lable-shown) + .watermark {
+   		 opacity: 0.3;
+	}
+	.watermark{
+		position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+	}
+	.btn-container{
+		text-align: center;
+	}
+	.btn{
+		padding: 10px 50px;
+            background-color: #007bff;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+	}
+	.btn:hover {
+     background-color: rgb(48, 154, 72);
+     }
+     .header
+     {
+		 text-align: center;
+     }
+     .modal-bg{
+     	background-image:url("https://www.xmple.com/wallpaper/pink-white-gradient-linear-1200x1600-c2-fffafa-ffb6c1-a-90-f-14.svg");
+     }
+     .margin-left-password{
+     	margin-left:50px;
+     }
+</style>
+
+
+</head>
+<body background="https://dataintell.io/wp-content/uploads/2022/01/Customer-experience-Data-and-analytics.jpeg" style="background-size:100%">
+<h1 style= "font-family:'Times New Roman', Times, serif; text-align : center;color: rgb(17, 78, 111);padding:center;padding-top: 20%;font-size:60px">Daily Expense Tracker</h1>
+<div class="top-links" >
+<a href="Signup.html" data-bs-toggle="modal" data-bs-target="#exampleModalRegister"><b>Sign up</b></a>
+<a href="Login.html" data-bs-toggle="modal" data-bs-target="#exampleModalLogin"><b>Login</b></a>
+
+        <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-bg">
+                    <div class="modal-header d-flex flex-column justify-content-center">
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                           <h2 style="text-align: center;color: rgb(17, 78, 111);font-size:35px">Login</h2>
+
+                    </div>
+                    <div class="modal-body">
+                       <div class="container">
+
+
+<form method="post" action="login" id='login-form'>
+	<fieldset>
+
+			<div class=" d-flex flex-column justify-content-center align-items-center">
+
+					<div class="input-container d-flex flex-column justify-content-center align-items-center">
+			                    <input type="email" id="email" name="uid" required>
+			                    <label class="watermark" for="email">User ID</label>
+					</div>
+
+					<div class="input-container d-flex flex-column justify-content-center align-items-center">
+						<input type="password" id="password" name="password" required>
+	                    <label class="watermark" for="password">Password</label><br><br>
+			</div>
+				</div> 
+
+		 	<div class="text-center" >
+                <button type="submit" class="btn" id="myLoginBtn">Login</button>
+            </div>
+     </fieldset>
+				
+</form>         
+			
+<script>
+    document.getElementById("login-form").addEventListener("submit", function(event) 
+    {
+        // Check if the login is successful (you'll need to implement this logic)
+        var loginSuccessful = true; // Change this to your actual logic
+
+        if (loginSuccessful) {
+            // Set a flag in local storage to indicate successful login
+            localStorage.setItem("isLoggedIn", "true");
+        }
+    });
+</script>
+				
+                </div>
+ <div class="header mt-5" >
+        <p>Don't have an account? <a href="Signup.html"  data-bs-toggle="modal" data-bs-target="#exampleModalRegister" style="text-align: right; color: blue;">Register here</a></p>
+        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-bg">
+                    <div class="modal-header d-flex flex-column justify-content-center">
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                           <h2 style="text-align: center;color: rgb(17, 78, 111);font-size:35px">Register</h2>
+
+                    </div>
+                    <div class="modal-body">
+                       <div class="container">
+                        
+   
+
+<form method="post" action="Signup" id='signup-form'>
+	<fieldset>
+			<div class=" d-flex flex-column justify-content-center align-items-center">
+
+				<div class="input-container d-flex flex-column justify-content-center align-items-center">
+		                    <input type="text" id="alphabeticInput" name="uname"  oninput="this.value = this.value.replace(/[^A-Za-z]/g, '');" title="enter only alphabets" required>
+		                    <label class="watermark" for="name">User Name</label>
+				</div>
+
+
+				<div class="input-container d-flex flex-column justify-content-center align-items-center">
+		                    <input type="email" id="email" name="uid" required>
+		                    <label class="watermark" for="email">Email ID</label>
+				</div>
+
+
+				<div class="d-flex flex-row ">
+
+						<div class="input-container  margin-left-password ">
+							
+							<input type="password" id="password" name="password" class=" w-75"  title="Please enter Capitals,numeric,special-character,alphabets." pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$" required>
+		                    <label class="watermark" for="password">Password</label><br><br>
+
+						</div>
+						<div  class="input-container">
+							 <input type="password" id="cpassword" name="cpassword" class="w-75"  title="Please enter Capitals,numeric,special-character,alphabets." pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$"  required>
+	                         <label class="watermark" for="cpassword">Confirm Password</label><br><br>
+						</div>
+
+				</div>
+
+
+			</div> 
+		 <div class="btn-container">
+                <button type="submit" class="btn" id="myRegisterBtn">Register</button>
+         </div>
+       </fieldset>
+
+</form> 
+
+       
+                </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</div>
+
+</body>
+</html>

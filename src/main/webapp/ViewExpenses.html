@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+        .my-nav {
+
+            height: 15vh;
+        }
+        .nav-image{
+			height:150px;
+			width:150px;
+		}	
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .my-side-bar {
+        padding:35px;
+		padding-top:20px;
+		font-size:15px;
+        }
+
+        .bg-container {
+            height: 100vh;
+            background-size: cover;
+            width: 100vw;
+        }
+
+        .card-item {
+            text-align: center;
+            background-color: white;
+            border-radius: 25px;
+            margin: 15px;
+            padding: 20px;
+            height: 200px;
+            width: 200px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 50px;
+            width: 50px;
+        }
+
+        .card-name {
+            font-family: roboto;
+            font-size: 19px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body background="https://www.xmple.com/wallpaper/pink-white-gradient-linear-1200x1600-c2-fffafa-ffb6c1-a-90-f-14.svg" style="background-size:cover"; font-family: 'Times New Roman' , Times, serif">
+
+    <nav class="navbar navbar-light bg-info ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="https://igamemom.com/wp-content/uploads/2014/10/Expense-Tracker-2.0-logo.png" class="logo" />
+            </a>
+        </div>
+    </nav>
+    <div class="d-flex flex-row">
+              <div class=" bg-light ">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav my-side-bar ml-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" class="nav-image"/>
+                 <h4 class="text-center">My Name</h4>
+                 <p class="text-center">My email</p>   
+                    <a class="nav-link active" id="navItem1" href="Dashboard.html">
+                        <i class="fa-solid fa-house"></i> 
+                        <span class="ml-2">Dashboard</span>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-link" href="AddExpenses.html" id="navItem2">
+						<i class="fa-solid fa-square-plus"></i> 
+						<span class="ml-2">Add Expenses</span>
+                    </a>
+                    <a class="nav-link" href="Manageexpenses" id="navItem3">
+                    	<i class="fa-solid fa-hand-holding-dollar"></i>
+						<span class="ml-2">Manage Expenses</span>
+                    	
+                    </a>
+                    <a class="nav-link" href="ViewExpenses.html" id="navItem4">
+                    	<i class="fa-solid fa-coins"></i>
+						<span class="ml-2">View Expenses</span>
+                    </a>	
+                 <p class="text-center mt-1 mb-1 pb-0 pt-0 bg-dark text-light">SETTINGS</p>   
+                 	
+                    <a class="nav-link" href="Userprofile.jsp" id="navItem5">
+						<i class="fa-regular fa-user"></i>
+						<span class="ml-2">Profile</span>
+                    </a>	
+                    <a class="nav-link" href="index.html" id="navItem6">
+							<i class="fa-solid fa-rotate"></i>
+							<span class="ml-2">Logout</span>
+                    </a>	
+                </div>
+            </div>
+        </div>
+        <div class="bg-container d-flex flex-column justify-content-center align-items-center">
+
+            <div class="d-flex">
+                <a href="todaysExpenses" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6895/6895217.png" alt="Todays Expense" class="card-image" /><br>
+                        <h5 class="card-name">Today's Expenses</h5>
+                    </div>
+                </a>
+
+                <a href="yesterdaysExpenses" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6816/6816744.png" alt="Yesterdays Expenses" class="card-image" /><br>
+                        <h5 class="card-name">Yesterdays Expenses</h5>
+                    </div>
+                </a>
+                <a href="last7DaysExpenses" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6159/6159781.png" alt="Last 7 Days Expenses" class="card-image" /><br>
+                        <h5 class="card-name">Last 7 Days Expenses</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <a href="currentmonthExpenses" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/128/10755/10755666.png" alt="Current Year Expenses" class="card-image" /><br>
+                        <h5 class="card-name">Current month Expenses</h5>
+                    </div>
+                </a>
+                <a href="totalExpenses" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/11439/11439084.png" alt="Total Expenses" class="card-image" /><br>
+                        <h5 class="card-name">Total Expenses</h5>
+                    </div>
+                </a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

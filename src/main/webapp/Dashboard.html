@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+       <script src="https://kit.fontawesome.com/948fcee865.js" crossorigin="anonymous"></script>
+   
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+		.nav-image{
+			height:150px;
+			width:150px;
+			
+		}
+        <!--.my-nav {
+            height: 15vh; 
+        } -->
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .bg-container {
+            height: 80vh;
+            background-size: cover;
+            width: 100vw;
+        }
+
+        .card-item {
+            text-align: center;
+            background-color: white;
+            border-radius: 25px;
+            margin: 13px;
+            padding: 20px;
+            height: 190px;
+            width: 200px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 70px;
+            width: 70px;
+        }
+
+        .card-name {
+            font-family: roboto;
+            font-size: 19px;
+            font-weight: bolder;
+        }
+          .my-side-bar{
+		padding:35px;
+		padding-top:20px;
+		font-size:15px;
+		}
+    </style>
+</head>
+
+<body background="" style="background-size:cover"; font-family: 'Times New Roman', Times, serif">
+
+ 
+     <nav class="navbar navbar-light bg-info ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="Dashboard.html">
+                <img src="https://igamemom.com/wp-content/uploads/2014/10/Expense-Tracker-2.0-logo.png" class="logo" />
+            </a>
+        </div>
+    </nav>
+    <div class="d-flex flex-row">
+   
+        <div class=" bg-light ">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav my-side-bar ml-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" class="nav-image"/>
+                 <h4 class="text-center">My Name</h4>
+                 <p class="text-center">My email</p> 
+                    <a class="nav-link active" id="navItem1" href="Dashboard.html">
+                        <i class="fa-solid fa-house"></i> 
+                        <span class="ml-2">Dashboard</span>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-link" href="AddExpenses.html" id="navItem2">
+						<i class="fa-solid fa-square-plus"></i> 
+						<span class="ml-2">Add Expenses</span>
+                    </a>
+                    <a class="nav-link" href="Manageexpenses" id="navItem3">
+                    	<i class="fa-solid fa-hand-holding-dollar"></i>
+						<span class="ml-2">Manage Expenses</span>
+                    	
+                    </a>
+                    <a class="nav-link" href="ViewExpenses.html" id="navItem4">
+                    	<i class="fa-solid fa-coins"></i>
+						<span class="ml-2">View Expenses</span>
+                    </a>	
+                 <p class="text-center mt-1 mb-1 pb-0 pt-0 bg-dark text-light">SETTINGS</p>   
+                 	
+                    <a class="nav-link" href="Userprofile.jsp" id="navItem5">
+						<i class="fa-regular fa-user"></i>
+						<span class="ml-2">Profile</span>
+                    </a>	
+                    <a class="nav-link" href="index.html" id="navItem6">
+							<i class="fa-solid fa-rotate"></i>
+							<span class="ml-2">Logout</span>
+                    </a>	
+                </div>
+            </div>
+        </div>
+        
+     </div>   
+
+       <div class="bg-container">
+		   
+     <div class="d-flex flex-column justify-content-end align-items-end ">
+	<div>
+		<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content" style="background-color: rgb(31, 180, 75);">
+            <div class="modal-header">
+                <h6 class="modal-title" id="successModalLabel">Successfully Logged In</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+		<script>
+                    if (localStorage.getItem("isLoggedIn") === "true") 
+                    {
+                        // Show the success modal when the flag is set
+                        $('#successModal').modal('show');
+                        // Clear the flag after displaying the modal
+                        localStorage.removeItem("isLoggedIn");
+                    }
+                    
+                    
+                </script>
+        </div>
+        <div>
+        	<div class="modal fade" id="successRegisterModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: rgb(31, 180, 75);">
+            <div class="modal-header">
+                <h6 class="modal-title" id="successModalLabel">Successfully Registered</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Check if registration was successful and display the success modal
+    if (sessionStorage.getItem("isRegistered") === "true") {
+        $('#successRegisterModal').modal('show');
+        sessionStorage.removeItem("isRegistered");  // Clear the flag
+    }
+</script>
+        	
+        
+        </div>
+        
+     </div>
+        
+       <div class=" d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex">
+                <a href="Userprofile.jsp" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://clipground.com/images/my-profile-icon-clipart-2.jpg" alt="User Profile" class="card-image" /><br>
+                        <h3 class="card-name">User Profile</h3>
+                    </div>
+                </a>
+
+                <a href="AddExpenses.html" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://cdn1.iconfinder.com/data/icons/media-agency-malibu-vol-1-1/128/Cost_Plus-512.png" alt="Add Expenses" class="card-image" /><br>
+                        <h3 class="card-name">Add Expenses</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <a href="Manageexpenses" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://www.vcbay.news/wp-content/uploads/2021/03/Kuda-1-420x420.jpg" alt="Manage Expenses" class="card-image" /><br>
+                        <h3 class="card-name">Manage Expenses</h3>
+                    </div>
+                </a>
+                <a href="ViewExpenses.html" class="btn" style="color: rgb(17, 78, 111);">
+                    <div class="card-item  d-flex flex-column justify-content-center align-items-center ">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/budget-planning-7464593-6109696.png" alt="View Expenses" class="card-image" /><br>
+                        <h1 class="card-name">View Expenses</h1>
+                    </div>
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+     
+</body>
+
+</html>
